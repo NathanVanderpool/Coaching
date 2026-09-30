@@ -1,0 +1,321 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Coaching with Nathan Vanderpool</title>
+<meta name="description" content="Coaching in English and German with Nathan Vanderpool. I help you get clear on where you are, what you're choosing, and what comes next.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500&family=Instrument+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ground:#F3EDE3;
+  --tone:#E9E0D2;
+  --card:#FBF8F3;
+  --line:#DDD3C4;
+  --ink:#1F1B17;
+  --ink-2:#3D352E;
+  --muted:#5A5149;
+  --accent:#8C3F22;
+  --accent-dark:#6B2E17;
+  --dark:#2A241F;
+  --serif:Fraunces, Georgia, "Times New Roman", serif;
+  --sans:"Instrument Sans", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  --pad-x:clamp(20px, 6.5vw, 96px);
+  --pad-y:clamp(72px, 9vw, 128px);
+}
+*,*::before,*::after{box-sizing:border-box}
+html{background:var(--ground);scroll-behavior:smooth}
+body{margin:0;background:var(--ground);color:var(--ink);font-family:var(--sans);font-size:18px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:var(--accent)}
+a:hover{color:var(--accent-dark)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px}
+h1,h2,h3{font-family:var(--serif);font-weight:500;margin:0}
+p{margin:0}
+.wrap{max-width:1440px;margin:0 auto;padding:0 var(--pad-x)}
+section{padding:var(--pad-y) 0}
+.tone{background:var(--tone)}
+h2{font-size:clamp(36px, 4.2vw, 52px);line-height:1.1;letter-spacing:-0.01em}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;min-height:52px;padding:0 28px;border-radius:999px;font-size:17px;font-weight:500;text-decoration:none;border:1px solid transparent}
+.btn-primary{background:var(--accent);color:#fff}
+.btn-primary:hover{background:var(--accent-dark);color:#fff}
+.btn-secondary{border-color:var(--ink);color:var(--ink)}
+.btn-secondary:hover{background:var(--ink);color:var(--ground)}
+
+/* Header */
+.site-header{border-bottom:1px solid var(--line)}
+.site-header .wrap{display:flex;justify-content:space-between;align-items:center;gap:24px;padding-top:24px;padding-bottom:24px}
+.brand{font-family:var(--serif);font-size:24px;font-weight:500;color:var(--ink);text-decoration:none}
+.nav{display:flex;align-items:center;gap:36px;font-size:16px}
+.nav a{color:var(--ink);text-decoration:none}
+.nav a:hover{color:var(--accent)}
+.nav .btn{min-height:44px;padding:0 22px;font-size:16px;color:#fff}
+
+/* Hero */
+.hero{padding-top:clamp(56px, 8vw, 120px);padding-bottom:clamp(56px, 8vw, 112px)}
+.hero .wrap{display:grid;grid-template-columns:1fr 1fr;gap:clamp(40px, 5.5vw, 80px);align-items:center}
+.hero-text{display:flex;flex-direction:column;gap:28px}
+.kicker{font-size:15px;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:var(--accent)}
+.hero h1{font-size:clamp(52px, 6.2vw, 88px);line-height:1.02;letter-spacing:-0.02em}
+.lede{font-size:clamp(18px, 1.5vw, 21px);color:var(--ink-2);max-width:560px}
+.actions{display:flex;flex-wrap:wrap;gap:16px;padding-top:8px}
+.hero-photo{width:100%;height:clamp(420px, 44vw, 640px);object-fit:cover;object-position:50% 55%;border-radius:4px;background:#E3D9CA}
+
+/* Two-column intro */
+.split{display:grid;grid-template-columns:repeat(12, minmax(0, 1fr));gap:32px}
+.split h2{grid-column:span 5}
+.split .body{grid-column:7 / span 6;display:flex;flex-direction:column;gap:24px;font-size:20px;line-height:1.65;color:var(--ink-2)}
+
+/* Situations */
+.situations .wrap{display:flex;flex-direction:column;gap:56px}
+.situations h2{max-width:820px}
+.cards{display:grid;grid-template-columns:repeat(4, minmax(0, 1fr));gap:24px}
+.card{display:flex;flex-direction:column;gap:16px;padding:32px;background:var(--card);border:1px solid var(--line);border-radius:4px}
+.card h3{font-size:26px;line-height:1.2}
+.card p{font-size:17px;color:var(--ink-2)}
+
+/* Steps */
+.steps .wrap{display:flex;flex-direction:column;gap:64px}
+.step-list{display:grid;grid-template-columns:repeat(3, minmax(0, 1fr));gap:56px;list-style:none;margin:0;padding:0}
+.step{display:flex;flex-direction:column;gap:18px}
+.step-num{font-family:var(--serif);font-size:64px;line-height:1;color:var(--accent)}
+.step h3{font-size:28px}
+.step p{color:var(--ink-2);line-height:1.65}
+
+/* About */
+.about{background:var(--dark);color:var(--ground)}
+.about .wrap{display:grid;grid-template-columns:repeat(12, minmax(0, 1fr));gap:32px}
+.about-photo{grid-column:span 4;position:relative;min-height:480px;border-radius:4px;overflow:hidden;background:#3A332D}
+.about-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.about-text{grid-column:6 / span 7;display:flex;flex-direction:column;justify-content:center;gap:24px;font-size:20px;line-height:1.7;color:#E8E0D4}
+.about-text h2{color:var(--ground);margin-bottom:8px}
+.about-text .small{font-size:16px;color:#BFB4A5}
+.about-text a{color:#E7A580}
+.about-text a:hover{color:#F3C3A5}
+.about a:focus-visible{outline-color:#E7A580}
+
+/* Quotes */
+.quotes .wrap{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:64px}
+.quote{margin:0;display:flex;flex-direction:column;justify-content:space-between;gap:36px}
+.quote blockquote{margin:0;font-family:var(--serif);font-size:clamp(24px, 2.2vw, 30px);line-height:1.45;font-weight:400}
+.quote figcaption{display:flex;align-items:center;gap:18px}
+.avatar{width:72px;height:72px;flex-shrink:0;border-radius:999px;object-fit:cover;background:#D6CAB8}
+.who{display:flex;flex-direction:column;gap:6px}
+.name{font-size:16px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--ink-2)}
+.who a{font-size:16px}
+
+/* Sessions */
+.sessions .wrap{display:grid;grid-template-columns:repeat(2, minmax(0, 1fr));gap:64px}
+.panel{display:flex;flex-direction:column;gap:20px;padding:clamp(28px, 3.4vw, 48px);border:1px solid var(--line);border-radius:4px}
+.panel.filled{background:var(--card)}
+.panel h3{font-size:34px}
+.panel p{color:var(--ink-2);line-height:1.65}
+.facts{display:grid;grid-template-columns:auto 1fr;gap:16px 32px;margin:0;font-size:17px;line-height:1.5}
+.facts dt{color:var(--muted)}
+.facts dd{margin:0;overflow-wrap:anywhere}
+
+/* Closing */
+.closing{padding-bottom:48px}
+.closing .wrap{display:flex;flex-direction:column;gap:clamp(64px, 8vw, 120px)}
+.closing-text{display:flex;flex-direction:column;gap:28px;max-width:760px}
+.closing h2{font-size:clamp(42px, 4.6vw, 64px);line-height:1.05;letter-spacing:-0.02em}
+.closing p{font-size:20px;color:var(--ink-2)}
+.site-footer{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:16px;padding-top:28px;border-top:1px solid #C9BCAA;font-size:14px;color:var(--muted)}
+.site-footer nav{display:flex;gap:28px}
+.site-footer a{color:var(--muted)}
+
+/* Tablet */
+@media (max-width: 1080px){
+  .cards{grid-template-columns:repeat(2, minmax(0, 1fr))}
+  .split h2,.split .body{grid-column:1 / -1}
+  .about-photo{grid-column:span 5}
+  .about-text{grid-column:6 / span 7}
+}
+/* Phone */
+@media (max-width: 760px){
+  body{font-size:17px}
+  .nav a:not(.btn){display:none}
+  .hero .wrap{grid-template-columns:1fr}
+  .hero-photo{height:min(110vw, 520px)}
+  .cards,.step-list,.quotes .wrap,.sessions .wrap{grid-template-columns:1fr}
+  .step-list{gap:40px}
+  .quotes .wrap,.sessions .wrap{gap:48px}
+  .about-photo,.about-text{grid-column:1 / -1}
+  .about-photo{min-height:0;aspect-ratio:2 / 3;max-width:420px}
+  .split .body,.about-text{font-size:18px}
+}
+@media (prefers-reduced-motion: reduce){
+  html{scroll-behavior:auto}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="wrap">
+    <a class="brand" href="#top">Nathan Vanderpool</a>
+    <nav class="nav" aria-label="Main">
+      <a href="#how">How it works</a>
+      <a href="#about">About</a>
+      <a href="#sessions">Sessions</a>
+      <a class="btn btn-primary" href="mailto:nathanvanderpoolphd@gmail.com">Write to me</a>
+    </nav>
+  </div>
+</header>
+
+<main>
+
+<section id="top" class="hero">
+  <div class="wrap">
+    <div class="hero-text">
+      <p class="kicker">Coaching in English and German</p>
+      <h1>Let's get you unstuck.</h1>
+      <p class="lede">You're standing at a threshold. Maybe it's a decision you keep circling, an ending you didn't choose, or a beginning you're not sure you're ready for. I help you get clear on where you are, what you're choosing, and what comes next. I don't hand you answers. I help you find your own.</p>
+      <div class="actions">
+        <a class="btn btn-primary" href="mailto:nathanvanderpoolphd@gmail.com">Book a first conversation</a>
+        <a class="btn btn-secondary" href="#how">How it works</a>
+      </div>
+    </div>
+    <img class="hero-photo" src="images/nathan_lake.jpg" alt="Nathan Vanderpool rowing a boat on a lake">
+  </div>
+</section>
+
+<section class="tone">
+  <div class="wrap split">
+    <h2>Coaching is a conversation that goes somewhere.</h2>
+    <div class="body">
+      <p>We look at your situation, the choices in front of you, and what's actually in your way. Then we keep looking until something shifts.</p>
+      <p>I hold space and provide structure. The work happens through you, not to you.</p>
+    </div>
+  </div>
+</section>
+
+<section class="situations">
+  <div class="wrap">
+    <h2>People usually come to me when something big is moving.</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>A decision you keep circling</h3>
+        <p>You've made the lists and talked it through. You're still stuck, and you're tired of thinking about it.</p>
+      </div>
+      <div class="card">
+        <h3>A relationship that's changing</h3>
+        <p>Something between you and someone important has shifted, and you don't know yet what you want.</p>
+      </div>
+      <div class="card">
+        <h3>A conflict you can't shake</h3>
+        <p>You keep ending up in the same argument at work or at home, and you suspect it's about more than the argument.</p>
+      </div>
+      <div class="card">
+        <h3>An ending you're still carrying</h3>
+        <p>A goodbye, a loss, or a door that closed is still asking something of you, and you want to answer it.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="how" class="steps tone">
+  <div class="wrap">
+    <h2>Here's how we'd work together.</h2>
+    <ol class="step-list">
+      <li class="step">
+        <span class="step-num" aria-hidden="true">1</span>
+        <h3>We start with a conversation.</h3>
+        <p>You tell me what's going on, and we both find out whether this is a good fit. The first call is free.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">2</span>
+        <h3>We meet for sessions.</h3>
+        <p>Sessions are 60 minutes long. We meet online, or in person when we're in the same city, in English or German. We set the rhythm together.</p>
+      </li>
+      <li class="step">
+        <span class="step-num" aria-hidden="true">3</span>
+        <h3>Sometimes we write a song.</h3>
+        <p>If it helps, we turn what came up into a song you can keep and sing. It's optional. Some people want it, and some don't.</p>
+      </li>
+    </ol>
+  </div>
+</section>
+
+<section id="about" class="about">
+  <div class="wrap">
+    <div class="about-photo">
+      <img src="images/nathan.webp" alt="Portrait of Nathan Vanderpool">
+    </div>
+    <div class="about-text">
+      <h2>About me</h2>
+      <p>I've been writing songs since I was 13, and I've spent the years since split between music and a quieter track: a doctorate in the sociology of religion, time in monasteries, and training in how people work through what's hard.</p>
+      <p>I've led groups for about fifteen years, and I've spent a decade designing ritual spaces for people navigating what matters most. I've sat with people through their hardest moments. I'm not a teacher, but I'm an adept practitioner.</p>
+      <p>My coaching draws on all of it: academic training in how meaning-making works, musical practice, contemplative training, and years of holding space when things fall apart.</p>
+      <p class="small">I also make songs with people through <a href="https://agapicchants.com">Agapic Chants</a>, and I founded <a href="https://rspnd.network/">Respond</a>.</p>
+    </div>
+  </div>
+</section>
+
+<section class="quotes tone">
+  <div class="wrap">
+    <figure class="quote">
+      <blockquote>“We mapped a recent professional conflict I had back to some much deeper issues and then transformed those old associations into an empowering sense of being reborn. And then … in a surprising twist — Nathan and I wrote a song about it!”</blockquote>
+      <figcaption>
+        <img class="avatar" src="images/ajbond.png" alt="A.J. Bond" style="object-position:50% 30%">
+        <div class="who">
+          <span class="name">A.J. Bond</span>
+          <a href="https://discomfortable.net/nathan-vanderpool/">Hear his full story on Discomfortable →</a>
+        </div>
+      </figcaption>
+    </figure>
+    <figure class="quote">
+      <blockquote>“This wasn't a one off... interacting with Nathan and his work has done some significant course-consolidation in my life.”</blockquote>
+      <figcaption>
+        <img class="avatar" src="images/river.jpg" alt="River Kenna">
+        <div class="who">
+          <span class="name">River Kenna</span>
+          <a href="https://www.innerwilds.blog/p/what-changed-my-life">Read his account on Inner Wilds →</a>
+        </div>
+      </figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="sessions" class="sessions">
+  <div class="wrap">
+    <div class="panel">
+      <h3>Coaching isn't therapy.</h3>
+      <p>It doesn't replace psychotherapy or medical care. If I think a therapist or a doctor would serve you better, I'll tell you, and we'll talk honestly about what that means for our work.</p>
+    </div>
+    <div class="panel filled">
+      <h3>The practical side</h3>
+      <dl class="facts">
+        <dt>Sessions</dt><dd>60 minutes · [YOUR PRICE]</dd>
+        <dt>Where</dt><dd>Online, or in person</dd>
+        <dt>Language</dt><dd>English or German</dd>
+        <dt>Contact</dt><dd><a href="mailto:nathanvanderpoolphd@gmail.com">nathanvanderpoolphd@gmail.com</a></dd>
+      </dl>
+    </div>
+  </div>
+</section>
+
+<section class="closing tone">
+  <div class="wrap">
+    <div class="closing-text">
+      <h2>If something's stuck, write to me.</h2>
+      <p>Tell me a little about what's going on. I'll write back, and we'll find a time to talk.</p>
+      <div><a class="btn btn-primary" href="mailto:nathanvanderpoolphd@gmail.com">Write to me</a></div>
+    </div>
+    <footer class="site-footer">
+      <span>© 2026 Nathan Vanderpool</span>
+      <nav aria-label="Legal">
+        <a href="impressum.html">Impressum</a>
+        <a href="datenschutz.html">Datenschutz</a>
+      </nav>
+    </footer>
+  </div>
+</section>
+
+</main>
+</body>
+</html>
